@@ -1,19 +1,23 @@
-console.log(domainName("http://www.ohzn5s-pbvi50y.io/archive/"));
+console.log(domainName("http://ohzn5s-pbvi50y.io/archive/"));
 
 function domainName(url){
 
-    
-    
-    let startCut= url.includes("//")?url.indexOf("//")+2
-    :url.includes("www.")?url.indexOf("www.")+4
-    :url.includes("/www.")?url.indexOf("/www.")+5
-    
-    :0 ; 
+    let startCut="";
+
+    if(url.includes("//"))
+    {
+
+       startCut=url.indexOf("//")+2
+    }
+
+    if (url.includes("www."))
+    {
+       startCut=url.indexOf("www.")+4
+    }
  
-    let afterSlases = url.slice(startCut);
+    let afterFistCut = url.slice(startCut);
 
-
-return afterSlases.slice(0,afterSlases.indexOf("."));
+return afterFistCut.slice(0,afterFistCut.indexOf("."));
 
 
   }
