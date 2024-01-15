@@ -2,6 +2,8 @@ console.log(deleteNth([1,1,3,3,7,2,2,2,2], 3));
 
 function deleteNth(arr,n){
    
+   // console.log(arr.filter(x=>x!=1));
+
     const counts = {};
     let output=[];
 
